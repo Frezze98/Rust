@@ -36,14 +36,14 @@ fn define_x() {
     // 5 🌟🌟 
     let x: i32 = 5;
     {
-        let x = 12; // Shadowing the outer x
-        assert_eq!(x, 12); // Now this assertion passes
+        let x = 12;
+        assert_eq!(x, 12);
     }
 
-    assert_eq!(x, 5); // The outer x is still 5
+    assert_eq!(x, 5); // Зовнішній x досі дорівнює 5
 
-    let x = 42; // Creating a new x (shadowing the previous ones)
-    println!("{}", x); // Prints "42".
+    let x = 42;
+    println!("{}", x); // Виводить "42".
 
 
     // 6 🌟🌟 
@@ -64,12 +64,12 @@ fn define_x() {
      // 7 🌟🌟 
     // Перше рішення    
     let x = 1;
-    println!("The value of x is: {}", x); // Use the value of x
+    println!("The value of x is: {}", x); // Використовуйте значення x
     
     // Друге рішення 
     let x = 1;
-    let x = x + 2; // Shadow the original x
-    println!("The updated value of x is: {}", x); // Use the updated value
+    let x = x + 2;
+    println!("The updated value of x is: {}", x); // Використати оновлене значення
 
      // 8 🌟🌟 
     let (mut x, y) = (1, 2); // Оголошуємо x як mut
